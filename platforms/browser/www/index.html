@@ -1,0 +1,2190 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<title>Servicio a domicilio</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css">
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.6.3/css/font-awesome.css">
+	<link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
+	<link href="assets/star-rating/css/star-rating.css" media="all" rel="stylesheet" type="text/css" />
+	<link href="js/jquery-ui/jquery-ui.css" media="all" rel="stylesheet" type="text/css" />
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
+
+	<!--<script src='https://www.google.com/recaptcha/api.js'></script>-->
+	
+</head>
+<body class="background intro no-logged" style="display: none">
+
+<div id="backbolita"></div>
+
+<header class="barrainvisible">
+	<div class="container">
+			<ul class="dropdown-menu">
+			 <!--<li id="iniciar_sesion"><i class="fa sign-in" aria-hidden="true"></i> Iniciar sesión</li>-->
+			 <li id="editar_perfil"><i class="fa fa-user" aria-hidden="true"></i><span>Perfil</span></li>
+			 <li id="lista_precios"><i class="fa fa-list" aria-hidden="true"></i><span>Lista de precios</span></li>
+			 <li id="editar_direcciones"><i class="fa fa-map-marker" aria-hidden="true"></i><span>Mis direcciones</span></li> 
+			 <li id="historial_pedidos" ><i class="fa fa-clock-o" aria-hidden="true"></i><span>Historial</span></li>
+			 <li id="hacer_pedido" class="hacer_pedido" ><i class="fa fa-plus" aria-hidden="true"></i><span>Nuevo pedido</span></li>
+			 
+	</div>
+</header>
+<div class="main container">
+		<div class="container contenedor-margen" >
+					
+					<div id="historial_1" class="contenedor-slide ">
+							<div class="panel panel-info panel_slide1">
+			                        <div class="panel-heading">
+			                            <div class="panel-title">
+			                                <div class="row">
+			                                    <div class="col-xs-12">
+			                                    	 <div class="back" data-destino="slidehome"><i class="fa fa-home" aria-hidden="true"></i></div>INICIAR SESIÓN<div class="avatar"><img src="images/avatar.png"></div>
+			                                    </div>
+
+			                                </div>
+			                            </div>
+			                        </div>
+			                        <div class="panel-body" id="tbl_producto">
+			                        	<div class="1_row row index">
+			                        		<div class="col-xs-12">
+			                        			<div class="row">
+			                        				<div class="col-sm-12">
+				                        				<div class="content-historial">
+				                        					<p>Aun no has hecho pedidos</p>
+				                        				</div>
+					                        		</div>
+					                        	</div>
+					                        </div>
+					                       </div>
+			                       	</div>                            
+			                     <div class="panel-footer">
+			                            <div class="row text-center">
+			                                
+			                                <div class="col-xs-12">
+			                                    
+			                                </div>
+			                            </div>
+			                        </div>                    		
+			                </div>
+					</div>
+					<div class="layer"></div>
+					<div id="slideprecios" class="contenedor-slide ">
+							<div class="panel panel-info panel_slide1">
+			                        <div class="panel-heading">
+			                            <div class="panel-title">
+			                                <div class="row">
+			                                    <div class="col-xs-12">
+			                                    	 <div class="back" data-destino="slidehome"><i class="fa fa-home" aria-hidden="true"></i></div>LISTA DE PRECIOS<div class="avatar"><img src="images/avatar.png"></div>
+			                                    </div>
+
+			                                </div>
+			                            </div>
+			                        </div>
+			                        <div class="panel-body" id="tbl_producto">
+			                        	<div class="1_row row index">
+			                        		<div class="col-xs-12">
+			                        			<div class="row">
+			                        				<div class="col-sm-12">
+				                        				<table>
+				                        					<thead>
+				                        						<td>Prendas</td>
+				                        						<td>Precio (desde)</td>
+				                        						<td>Pago por anticipado</td>
+				                        						<td>Solo PLANCHA</td>
+				                        						<td>Servicio <span class="satisfy">Premium</span></td>
+				                        					</thead>
+				                        					<tr>
+				                        						<td  class="viñetas"><span>Accesorios</span></td>
+				                        						<td ></td>
+				                        						<td ></td>
+				                        						<td ></td>
+				                        						<td ></td>
+				                        					</tr>
+				                        					<tr class="dotted">
+				                        						<td><p>Playera</p><p>Short</p><p>Corbata</p></td>
+				                        						<td>$40</td>
+				                        						<td>$36</td>
+				                        						<td>$20</td>
+				                        						<td>$55</td>
+				                        					</tr>
+															<tr class="dotted">
+				                        						<td><p>Blusa</p><p>Chaleco Sencillo</p></td>
+				                        						<td>$45</td>
+				                        						<td>$40</td>
+				                        						<td>$22</td>
+				                        						<td>$60</td>
+				                        					</tr>
+															<tr>
+				                        						<td><p>Bufanda</p></td>
+				                        						<td>$30</td>
+				                        						<td>$27</td>
+				                        						<td>$15</td>
+				                        						<td>$60</td>
+				                        					</tr>
+				                        					<tr>
+				                        						<td class="viñetas"><span>Básicos</span></td>
+				                        						<td ></td>
+				                        						<td ></td>
+				                        						<td ></td>
+				                        						<td ></td>
+				                        					</tr>
+															<tr>
+				                        						<td><p>Saco</p><p>Pantalón</p><p>Camisa</p><p>Falda</p></td>
+				                        						<td>$45</td>
+				                        						<td>$40</td>
+				                        						<td>$22</td>
+				                        						<td>$60</td>
+				                        					</tr>
+				                        					<tr>
+				                        						<td class="viñetas"><span>De temporada</span></td>
+				                        						<td ></td>
+				                        						<td ></td>
+				                        						<td ></td>
+				                        						<td ></td>
+				                        					</tr>
+															<tr class="dotted">
+				                        						<td><p>Gabardinas</p><p>Chamarras</p></td>
+				                        						<td>$70</td>
+				                        						<td>$63</td>
+				                        						<td>$35</td>
+				                        						<td>$85</td>
+				                        					</tr>
+															<tr>
+				                        						<td><p>Chaleco de plumas</p><p>Abrigos</p></td>
+				                        						<td>$80</td>
+				                        						<td>$72</td>
+				                        						<td>$40</td>
+				                        						<td>$95</td>
+				                        					</tr>
+				                        					<tr>
+				                        						<td class="viñetas"><span>Hogar</span></td>
+				                        						<td ></td>
+				                        						<td ></td>
+				                        						<td ></td>
+				                        						<td ></td>
+				                        					</tr>
+															<tr class="dotted">
+				                        						<td><p>Funda da Almohadas</p></td>
+				                        						<td>$30</td>
+				                        						<td>$27</td>
+				                        						<td>$15</td>
+				                        						<td>$45</td>
+				                        					</tr>
+															<tr class="dotted">
+				                        						<td><p>Cobertores Sencillos</p></td>
+				                        						<td>$80</td>
+				                        						<td>$72</td>
+				                        						<td>N/A</td>
+				                        						<td>$95</td>
+				                        					</tr>
+															<tr>
+				                        						<td><p>Limpieza de cortinas sencillas(m)</p></td>
+				                        						<td>$120</td>
+				                        						<td>$108</td>
+				                        						<td>$60</td>
+				                        						<td>$135</td>
+				                        					</tr>
+															
+				                        				</table>
+					                        		</div>
+					                        	</div>
+					                        </div>
+					                       </div>
+			                       	</div>                            
+			                     <div class="panel-footer">
+			                            <div class="row text-center">
+			                                
+			                                <div class="col-xs-12">
+			                                    
+			                                </div>
+			                            </div>
+			                        </div>                    		
+			                </div>
+					</div>
+
+
+					<div class="permisos">
+						<div class="interior">
+						<h2>Servicios de ubicación</h2>
+						<p>¡Quieres que utilicemos tu ubicación actual para tu nueva dirección?</p>
+						<p><button type="button" class="btn back-green text-white" id="permitir_ubicacion"> ACEPTAR </button>
+						<button type="button" class="btn back-green text-white" id="denegar_ubicacion"> DENEGAR </button></p>
+						</div>
+					</div> 
+						
+					<div class="confirm_cerrar_sesion">
+						<div class="interior">
+						<h2>Cerrar sesión</h2>
+						<p>¿Estás seguro de cerrar sesión?</p>
+						<p><button type="button" class="btn back-green text-white" id="aceptar_cerrar_sesión"> ACEPTAR </button>
+						<button type="button" class="btn back-green text-white" id="negar_cerrar_sesión"> CANCELAR </button></p>
+						</div>
+					</div> 
+					
+
+					<div class="cambios-guardados">
+					<p>Cambios guardados</p>
+					</div>	
+		
+					<div id="slideintro" class="contenedor-slide active">
+						<button type="button" class="btn btn-primary startbutton" id="startbutton"> EMPEZAR </button>
+							<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+								  <!-- Indicators -->
+								  <ol class="carousel-indicators">
+								    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+								    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+								    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+								  </ol>
+
+								  <!-- Wrapper for slides -->
+								  <div class="carousel-inner" role="listbox">
+								    <div class="item active" style="background-image: url(images/Intro-1.jpg)">
+								      <img src="images/Intro-1.jpg" alt="intro1" class="fondos">
+								      <div class="carousel-caption">
+								      		<h1 class="h1-servicio"><img src="images/logo2.png"></h1>	
+											<p  class="ft1-4"><span class=" text-blue">¡<span class=" text-green">Olvídate</span> de Lavar y Planchar!</span></p> <p class="ft1-8"><span class="text-blue"> Ahora la tintorería </span><span class="satisfy text-green">va a tu casa</span></p>	
+								       </div>
+								    </div>
+								    <div class="item" style="background-image: url(images/Intro-2.jpg)">
+								     <img src="images/Intro-2.jpg" alt="intro1" class="fondos">
+								     <div class="carousel-caption">
+								     		<p  class="ft1-4"> </p>
+								       		<p  class="ft1-4"><span class=" text-blue"><span class=" text-green">Solicita desde tu celular</span> y vamos</span></p> <p class="ft1-8"><span class="text-blue bold"> al rescate de tu ropa</span></p>
+								      </div>
+								    </div>
+								    <div class="item" style="background-image: url(images/Intro-3.jpg)">
+								     <img src="images/Intro-3.jpg" alt="intro1" class="fondos">
+								     <div class="carousel-caption">
+								       		<p  class="ft1-4"><span class=" text-blue">Ya no pierdas el <span class=" text-green">tiempo</span> ni luches con el tráfico</span></p> <p class="ft1-4"><span class="text-blue"> Hacemos tu <span class="ft1-2 text-green satisfy">vida mas fácil</span> y dejamos tu ropa como </span> <span class=" text-green"> nueva </span></p>
+								      </div>
+								    </div>
+								  </div>
+
+								  <!-- Controls -->
+								  
+								</div>
+
+					</div>
+
+
+
+					<div id="slide9" class="contenedor-slide landing ">
+						<h1 class="h1-servicio"><img src="images/logo.png"></h1>	
+						<div class="center-content landing-text">
+						<p  class="ft1-8"><span class="bold text-green ft1-2">Tintorerías a domicilio</span></p> <p class="ft1-8">en la <span class="satisfy ft1-2">palma de tu mano</span></p>	
+						</div>
+						<div class="buttons-stars">
+							<div id="loggin-button">
+								<div id="btn-loggin-slide"><span class="bold">INICIAR SESIÓN</span></div>
+							</div>
+							<div id="register-button">
+								<div id="btn-crear-cuenta"><span class="bold">REGÍSTRATE</span></div>
+							</div>
+							
+
+						</div>
+
+					</div>
+
+					<div id="map-container">
+						<div id="map"></div> 
+						<div id="map-instrucciones"><p>Arrastra el mapa para cambiar tu ubicación</p></div>
+						<div id="map-marker"><img src="images/map-marker.png"></div>
+
+						<button type="button" class="btn btn-primary back-green text white" id="fijar_ubicación"> OBTENER DIRECCIÓN </button>
+												
+					</div>
+														
+					
+					<div id="slideloggin" class="contenedor-slide back-blue">
+						
+							<div class="panel panel-info panel_slide9">
+			                        <div class="panel panel-info panel_slide9">
+			                        <div class="panel-heading">
+			                            <div class="panel-title">
+			                                <div class="row">
+			                                    <div class="col-xs-12">
+			                                    	 <div class="back" data-destino="slide9"><i class="fa fa-chevron-left" aria-hidden="true"></i></div>INICIAR SESIÓN
+			                                    </div>
+			                                </div>
+			                            </div>
+			                        </div>
+			                        <div class="panel-body" id="tbl_producto">
+			                        	<div class="1_row row index">
+			                        		<div class="col-xs-12">
+			                        			<div class="row block-loggin-default">
+			                        			<div id="login-facebook"><i class="fa fa-facebook" aria-hidden="true"></i><p>Iniciar sesión con Facebook</p></div>
+													<div class="col-xs-5"><hr></div><div class="col-xs-2">o</div><div class="col-xs-5"><hr></div>					
+			                        				<div class="row">
+			                        				<div class="col-sm-12">
+				                        				<div class="input-group content-correo-log" style="margin-top: 0px;">
+															  <i class="fa fa-envelope" aria-hidden="true"></i><input type="mail" class="form-control place-holder-blanco" placeholder="Correo" id="correo_loggin"   style="text-transform: inherit" aria-describedby="basic-addon1">
+														</div>
+														<div class="input-group content-password">
+															   <i class="fa fa-lock" aria-hidden="true"></i><input type="password" class="form-control place-holder-blanco" placeholder="Password"   style="text-transform: inherit" id="password_loggin" aria-describedby="basic-addon1">
+
+														</div>
+														
+													</div>	
+											        </div>
+											        <button type="button" class="btn btn-primary" id="btn-confirmar-loggin"> INICIAR SESIÓN </button>
+											        <p class="recover-pass"><a hrerf="" class="recover-pass">¿Olvidaste tu contraseña?</a></p>
+					                        	</div>
+					                        </div>
+											<div class="col-xs-12 loggin-facebook-box">
+											<div class="row">
+												<div id="imagen-facebook"><img id="response_imagen"></div>
+												<button type="button" class="btn btn-primary" id="button-start-facebook"> Iniciar sesión como <span id="response_name"></span> </button>
+												<input type="hidden" value="" id="response_email">
+												<p class="otheraccount"><a hrerf="" class="otheraccount">Iniciar sesión con otra cuenta</a></p>
+											</div>
+											</div>
+
+					                       </div>
+			                       	</div>                            
+			                                   		
+			               			</div>
+
+			                                        		
+			                </div>
+
+					</div>	
+
+
+						<div id="slide17" class="contenedor-slide back-blue">
+						
+		
+							<div class="panel panel-info panel_slide9">
+			                        <div class="panel panel-info panel_slide9">
+			                        <div class="panel-heading">
+			                            <div class="panel-title">
+			                                <div class="row">
+			                                    <div class="col-xs-12">
+			                                    	 <div class="back" data-destino="slideloggin"><i class="fa fa-chevron-left" aria-hidden="true"></i></div>RECUPERAR CONTRASEÑA
+			                                    </div>
+			                                </div>
+			                            </div>
+			                        </div>
+			                        <div class="panel-body" id="tbl_producto">
+			                        	<div class="1_row row index">
+			                        		<div class="col-xs-12">
+			                        			<div class="row">
+			                        				<div class="col-sm-12 content-form-recover">
+				                        				<div class="input-group">
+															  <i class="fa fa-envelope" aria-hidden="true"></i><input type="mail" class="form-control place-holder-blanco" placeholder="CORREO" id="correo_recover"   style="text-transform: inherit" aria-describedby="basic-addon1">
+														</div>
+														<div class="content-recover-buttons">
+															<button type="button" class="btn btn-danger  boton-verde back-slide9"><i class="fa fa-long-arrow-left" aria-hidden="true"></i> Volver</button>
+															<button type="button" class="btn btn-primary boton-verde " id="btn-recover-pass">Enviar</button>
+														</div>
+															
+											        </div>
+													<div class="col-sm-12 content-correo-enviado">
+				                        				<p>Hemos enviado tu contraseña al correo: <span id="correo_enviado"></span></p>
+															
+											        </div>
+
+					                        	</div>
+					                        </div>
+					                       </div>
+			                       	</div>                            
+			                                   		
+			               			</div>
+
+			                                        		
+			                </div>
+
+					</div>
+					
+					
+
+
+					<div id="slide2" class="contenedor-slide">
+							<p class="center"><img src="images/cargando.gif"></p>
+							
+							
+					</div>
+
+					
+					
+
+					<div id="slide3" class="contenedor-slide">
+							
+							<div class="panel panel-info panel_slide3">
+			                        <div class="panel-heading">
+			                            <div class="panel-title">
+			                                <div class="row">
+			                                    <div class="col-xs-12">
+			                                        <img src="images/icono.png"><h5>Lo sentimos mucho, en estos momentos no contamos con servicio a domicilio en tu zona, te avisaremos cuando esté disponible.</h5>
+			                                    </div>
+
+			                                </div>
+			                            </div>
+			                        </div>
+			                        <div class="panel-body" id="tbl_producto">
+			                        	<div class="1_row row index">
+			                        		<div class="col-xs-12">
+			                        			<p class="text-no-service">Ingresa <a style="text-decoration: underline" href="http://tintorerias7clean.com/sucursales-7clean/" target="_blank"> Aquí</a> para ubicar tu<br><br> <span class="textoazul">sucursal</span> <img src="images/logo2.png" width="80px" > más cercana.<br><br> <span class="textoverdecursiva">¡Te esperamos!</span></p>
+			                        			<p><button type="button" class="btn btn-primary none-float boton-verde" id="enviar_datos_neg_btn">Inicio</button><p/>
+					                        </div>
+					                       </div>
+			                       	</div>                            
+			                     <div class="panel-footer">
+			                            <div class="row text-center">
+			                                
+			                                <div class="col-xs-12">
+											
+			                                    
+			                                </div>
+			                            </div>
+			                        </div>                    		
+			                </div>
+
+
+
+							
+					</div>
+					
+					<div id="slidehome" class="contenedor-slide">
+						
+							<div class="panel panel-info panel_slide9">
+			                        <div class="panel panel-info panel_slide9">
+			                        <div class="panel-heading back-blue">
+			                            <div class="panel-title">
+			                                <div class="row">
+			                                    <div class="col-xs-12">
+			                                    	 BIENVENIDO<div class="avatar"><img src="images/avatar.png"></div>
+			                                    </div>
+			                                </div>
+			                            </div>
+			                        </div>
+			                        <div class="panel-body" id="tbl_producto">
+			                        	<div class="1_row row index">
+			                        		<div class="content-home">
+			                        			<div class="row">
+			                        			<div id="nuevo-pedido-home"><p>Nuevo pedido</p><i class="fa fa-plus" aria-hidden="true"></i></div>
+													<div class="row servicios-content">
+														<div class="col-xs-12">
+																<h1 class="satisfy">Servicios</h1>
+														</div>	
+														<div class="col-xs-4">
+															<div class="servicio">
+																<p><img src="images/serv-1.png"><br>Lavado en<br>seco y agua</p>
+															</div>
+														</div>
+														<div class="col-xs-4">
+															<div class="servicio">
+																<p><img src="images/serv-2.png"><br>Planchado</p>
+															</div>
+														</div>
+														<div class="col-xs-4">
+															<div class="servicio">
+																<p><img src="images/serv-3.png"><br>Peletería</p>
+															</div>
+														</div>
+														<div class="col-xs-6">
+															<div class="servicio">
+																<p><img src="images/serv-4.png"><br>Teñido</p>
+															</div>
+														</div>
+														<div class="col-xs-6">
+															<div class="servicio">
+																<p><img src="images/serv-5.png"><br>Wet Cleaning<br>(servicio premium)</p>
+															</div>
+														</div>
+
+													</div>
+													<div class="row servicios-content">
+														<div class="col-xs-12">
+																<h1 ><span class="satisfy">¿Por qué </span><img class="logohome" src="images/logo2.png" /><span class="satisfy">?</span></h1>
+														</div>	
+														<div class="col-xs-6">
+															<div class="servicio razon">
+																<p><img src="images/razon-1.png"><br>Damos garantía<br>de satisfacción</p>
+															</div>
+														</div>
+														<div class="col-xs-6">
+															<div class="servicio razon">
+																<p><img src="images/razon-2.png"><br>Somos ráspidos<br>y puntuales</p>
+															</div>
+														</div>
+														<div class="col-xs-6">
+															<div class="servicio razon">
+																<p><img src="images/razon-3.png"><br>Tenemos más de<br>10 años de experiencia</p>
+															</div>
+														</div>
+														<div class="col-xs-6">
+															<div class="servicio razon">
+																<p><img src="images/razon-4.png"><br>Tenemos tecnología<br>europea de punta</p>
+															</div>
+														</div>
+														
+
+													</div>
+
+
+					                        	</div>
+					                        </div>
+											
+
+					                       </div>
+			                       	</div>                            
+			                                   		
+			               			</div>
+
+			                                        		
+			                </div>
+
+					</div>	
+
+	
+
+					<div id="slide4" class="contenedor-slide">
+						<h1 class="h1-servicio">Servicio a domicilio</h1>	
+						<p class="center texto-blanco"><img  class="palomita" src="images/paloma.png"></p>	
+						<h2 class="satisfy">!Gracias por compartirnos tus datos!</h2>
+						<p class="center texto-blanco">Nos pondremos en contacto contigo cuando el servicio esté disponible en tu zona.</p>	
+						<button type="button" class="btn btn-danger none-float boton-verde back-slide1"><i class="fa fa-long-arrow-left" aria-hidden="true"></i> Volver</button>
+				          					                 
+			          
+							
+					</div>
+
+
+					<div id="slide5" class="contenedor-slide">
+						<h1 class="h1-servicio">Servicio a domicilio</h1>	
+						<h2>Ha ocurrido un error al enviar los datos. </h2>
+						<p>Inténtalo mas tarde</p>	
+						<button type="button" class="btn btn-danger none-float boton-verde back-slide1"><i class="fa fa-long-arrow-left" aria-hidden="true"></i> Volver</button>   						
+					</div>
+					
+					
+					<div id="slide6" class="contenedor-slide">
+						<h1 class="h1-servicio">Servicio a domicilio</h1>	
+		
+							<div class="panel panel-info panel_slide6">
+			                        <div class="panel-heading">
+			                            <div class="panel-title">
+			                                <div class="row">
+			                                    <div class="col-xs-12">
+													Cuentas con un código por parte de tu empresa?
+							 					</div>
+
+			                                </div>
+			                            </div>
+			                        </div>
+			                        <div class="panel-body" id="tbl_producto">
+			                        	<div class="1_row row index">
+			                        		<div class="col-xs-12">
+			                        			<div class="row">
+			                        				<div class="col-sm-12">
+														  <input type="radio" value="0" class="form-control invisibles input-convenio" id="convenio_false" name="convenio" aria-describedby="basic-addon1">
+														  <input type="radio" value="1" class="form-control invisibles input-convenio" id="convenio_true" name="convenio" aria-describedby="basic-addon1">
+															  <div class="btn-group" role="group" aria-label="...">
+															  <span ><img id="btn_convenio_true" class="btn-convenio" src="images/bolita-2.png"> Si</span>
+							 								  <span ><img id="btn_convenio_false" class="btn-convenio active" src="images/bolita-1.png"> No</span>
+						 									  </div>
+														  <p id="codigo-contenedor"><br>
+													  	  <span>Introduce el código que se te proporcionó en tu empresa:</span><br>
+													      <input type="text" value="" class="form-control place-holder-blanco texto-blanco" id="convenio-codigo" name="convenio-codigo" aria-describedby="basic-addon1"><br>
+													      </p>
+				          					        </div>
+					                        	</div>
+					                        </div>
+					                    </div>
+			                       	</div>                            
+			                     <div class="panel-footer">
+			                            <div class="row text-center">
+			                                <div class="col-xs-12">
+											<button type="button" class="btn btn-primary boton-verde" id="enviar_datos_codigo">Confirmar</button>
+											</div>
+			                            </div>
+			                        </div>                    		
+			                </div>		
+					</div>
+					
+					<div id="slide7" class="contenedor-slide">
+					<div class="back_direcciones"> <i class="fa fa-arrow-left" aria-hidden="true"></i> </div>
+						<p class="title_paso back_direcciones-title">PASO</p>
+						<p class="number_paso back_direcciones-number"><a href="#direccion" class="step">1</a> <a href="#agregar_productos" class="current-step">2</a> <a href="#detalles" class="step">3</a> </p>
+					 
+					 <div class="back_productos"> <i class="fa fa-arrow-left" aria-hidden="true"></i> </div>
+						<p class="title_paso back_productos-title">PASO</p>
+						<p class="number_paso back_productos-number"><a href="#direccion" class="step">2</a> <a href="#agregar_productos" class="current-step">3</a> <a href="#detalles" class="step">4</a> </p>
+						
+							<div id="contenedor_1">
+								
+								<div class="panel panel-info panel_slide7">
+				                        <div class="panel-heading">
+				                           <div class="panel-title">
+			                                <div class="row">
+			                                    <div class="col-xs-12">
+									             	Haz tu pedido
+									             	 
+						                        </div>
+			                                </div>
+			                            </div>
+				                        </div>
+				                        <div class="panel-body content-nopadding-top" id="tbl_producto">
+				                        	<div class="1_row row index">
+				                        		<div class="col-xs-12">
+				                        			<div class="row">
+				                        				<div class="">
+				                        				<div class="col-xs-12 col-sm-12 middle">
+				                        					
+				                                      		<div class="number-circle"><span>1</span></div><p class="texto-servicios">¿Qué servicio te interesa?</p>
+				                                      	</div>
+				                                      	<div  id="tabuladorservicios-content" class="btn-group col-xs-12 col-sm-12  middle" role="group" aria-label="..."><p id="tabuladorservicios"></p>
+														 </div> 
+						                        				<!-- <h2 id="tituloproducto">Planchado</h2> -->
+						                        			
+						                        				<div id="table-productos-ticket">
+						                        					<div id="campos-ticket" class="col-md-12">
+						                        						
+																			<h2 class=" pedido-title">PEDIDO</h2>
+																			<p class="col-md-1 col-xs-2 col-lg-1 col-sm-1 column-num">CANT.</p>
+																			<p class="col-md-3 col-xs-4 col-lg-3 col-sm-3 column-des">DESCRIPCIÓN</p>
+																			<p class="col-md-2 col-xs-0 col-lg-2 col-sm-2 column-ser">SERVICIO</p>
+																			<p class="col-md-3 col-xs-0 col-lg-3 col-sm-3 column-par">PARTICULARIDADES</p>
+																			<p class="col-md-2 col-xs-4 col-lg-2 col-sm-2 column-sub">SUBTOTAL</p>
+																			<p class="col-btn-delete col-md-1 col-xs-2 col-lg-1 col-sm-1 column-bor">&nbsp</p>
+																		
+
+
+						                        					</div>
+						                        				</div>
+						                        				<div class="col-xs-12 col-sm-12 middle title_productos_search">
+						                        				<div class="number-circle"><span>2</span></div><p class="texto-servicios">Selecciona tus prendas a tratar</p>
+						                        				</div>
+																	<table id="table-productos" class="table ">
+																	<thead>
+																		<tr>
+																			<th>Producto</th>
+																			<th class="middle">Cantidad</th>
+																			<th class="middle">Precio</th>
+																		</tr>
+																	</thead>	
+																	<tbody>
+																		<tr>
+																			<td>
+																				<div class="container-search"><input type="text" id="producto" class="producto" data-id-producto="" placeholder="Elige tu prenda"> 
+																				<div class="container-results"></div>
+																			</td>
+																			<td class="middle"><input type="number" value="1" disabled min="1" id="cantidad"></td>
+																			<td class="middle">$<span id="precio">0</span></td>
+																		</tr>
+																	</table>
+																
+																	<div class="align-left botones-personalizacion col-xs-12 col-sm-12" >
+																	 <div class="number-circle"><span>3</span></div><p class="texto-servicios">¿Deseas personalizar tu pedido?</p>  
+																	  <input type="radio" value="0" class="form-control invisibles personalizacion-option" id="personalizacion_false" name="personalizacion-option" aria-describedby="basic-addon1">
+																	  <input type="radio" value="1" class="form-control invisibles personalizacion-option" id="personalizacion_true" name="personalizacion-option" aria-describedby="basic-addon1">
+																	</div>
+																	 <div class="btn-group col-xs-12 col-sm-12 botones-opcion-personalizacion" role="group" aria-label="...">
+										 									   <img id="btn_personalizacion_true"  class=" btn-true btn-personalizacion" src="images/personalizacion-2.png"/> Si
+																		 	 <img  id="btn_personalizacion_false" class=" btn-true btn-personalizacion" src="images/personalizacion-1.png"/>No
+																		 	  
+																	</div>
+																	
+																	<table id="table-personalizaciones" class="table table-striped">
+																	<thead>
+																		<tr>
+																			<th>Personalización</th>
+																			<th class="col-precios-personalizacion middle">Precio</th>
+																			
+																		</tr>
+																	</thead>
+																	<tbody>
+																		<tr>
+																			<td class="order-personalizacion">
+																				<p class="radio-personalizacion col-xs-12 col-sm-12  col-md-4"><span class="col-xs-6 col-sm-6 col-md-12"><input type="radio" value="1" data="Doblado" id="presentacion1" class="presentacion" name="presentacion"><br>Doblado</span><span class="col-xs-6 col-sm-6 col-md-12"><input type="radio" value="2" data="Colgado" id="presentacion2"  class="presentacion" name="presentacion"><br>Colgado</span></p>
+
+																				<p class="radio-personalizacion col-xs-12 col-sm-12  col-md-4"><span class="col-xs-6 col-sm-6 col-md-12"><input type="radio" id="ganchos1"  value="1" data="Un Gancho" class="ganchos" name="ganchos"><br>Un gancho</span><span class="col-xs-6 col-sm-6 col-md-12"><input type="radio" value="2" data="Varios ganchos" id="ganchos2"  class="ganchos" name="ganchos"><br>Varios ganchos</span></p>
+																				
+																				<p class="radio-personalizacion col-xs-12 col-sm-12  col-md-4"><span class="col-xs-6 col-sm-6 col-md-12"><input type="radio" value="1" data="Con raya" id="planchado1" class="planchado" name="planchado"><br>Con raya</span><span class="col-xs-6 col-sm-6 col-md-12"><input type="radio" value="2" data="Sin raya" id="planchado2" class="planchado" name="planchado"><br>Sin raya</span></p>
+																			</td>
+																			<td class=" middle last-table-td"><br><span class="precio-personalizacion">Incluido</span></td>
+																		</tr>
+																	</tbody>
+																	</table>
+
+					          					        </div>
+						                        	</div>
+						                        </div>
+						                       </div>
+				                       
+				                       	</div>                            
+				                     <div class="panel-footer">
+				                            <div class="row text-center">
+				                                
+				                                <div class="col-xs-12">
+												
+													<p> <button type="button" class="btn btn-primary " id="agregar_a_ticket">Confirmar producto</button> <button type="button" class="btn btn-primary" id="agregar_otro">Agregar otro producto</button> <button type="button" class="btn btn-primary" id="terminar-edicion">Terminar</button><button type="button" class="btn btn-primary" id="cancelar_producto">Cancelar</button> </p> 
+															                                    
+				                                </div>
+				                            </div>
+				                        </div>                    		
+				                </div>
+							</div>
+							
+								
+			
+
+							<div id="contenedor-ticket">
+								
+
+									<div class="panel panel-info panel_slide7">
+			                        <div class="panel-heading">
+			                            <div class="panel-title">
+			                                <div class="row">
+			                                    Modo de pago 
+												
+			                                </div>
+			                            </div>
+			                        </div>
+			                        <div class="panel-body content-nopadding-top" id="tbl_producto">
+			                        	<div class="1_row row index">
+			                        		<div class="col-xs-12">
+			                        			<div class="row">
+			                        				<div class="">
+				                        				<!--<table   id="table-productos-ticket" data-toggle="table"  data-mobile-responsive="true" class="table table-hover"  >
+															<thead>
+																<tr>
+																	<th>Servicio</th>
+																	<th>Producto</th>
+																	<th class="middle">Cantidad</th>
+																	<th class="middle">Precio</th>
+																	<th class="middle col-delete">&nbsp</th>
+																</tr>
+															</thead>
+															<tbody>
+															</tbody>
+														</table>-->
+															
+															
+
+															
+															
+																	
+
+
+															<div id="modo_de_pago">
+
+
+															<div class="col-xs-12 col-sm-12 middle">
+				                        					
+				                                      		<div class="div_title_modo_de_pago number-circle"><span>1</span></div><p id="title_modo_de_pago"  class="texto-servicios">Elige tu modo de pago</p>
+				                                      	</div>
+																<!--<div class="tabs-content"><div  class="tabs-pago active" >Anticipado</div ><div class="tabs-pago" >Contraentrega</div></div>
+															
+																<div id="anticipado" class="modos_de_pago active">
+																<div class="content-center display-details ">
+																	<div class="col-sm-6">
+																		<p class="descuento_anticipado texto-azul">10<span class="texto-verde simbolo-pc">%</span> <br><span class="texto-verde texto-lineal ">de descuento</span></p>
+																	</div>
+																	<div class="col-sm-6">
+																		<button type="button" class="btn btn-primary" id="btn-anticipado">Seleccionar</button>
+																	</div>	
+																</div>
+																</div>
+																<div id="regular" class="modos_de_pago">
+																	<div class="content-center">
+																		<div class="display-details">
+																			<div id="datoscupon" class="col-sm-12">
+																					<p class="texto-verde">Si tienes un cupón utilizalo</p>
+																					<input type="text" name="cupon" id="cupon"><br>
+																					<button type="button" class="btn btn-primary" id="btn-cupon">Validar cupón</button>
+																			</div>
+																			<div id="div_cupon_valido" class="col-sm-12">
+																				<button type="button" class="btn btn-primary" id="btn-cupon_2">Aplicar descuento</button>
+																			</div>	
+																			<div id="espera_cupon">
+																					<p class="center"><img src="images/cargando.gif"></p>
+																			</div>
+																	</div>
+																	</div>
+																	
+																	
+																</div>-->
+																	
+																					<p id="title_total">Total a pagar: <br><br><span id="circulo_total"><span id="interior_total">$<span id="total_a_pagar">0</span></span></span></p>
+																					
+																					<p id="title_total2">Total a pagar: <span id="interior_total2">$<span id="total_a_pagar2">0</span></span></p>
+																<div id="anticipado" class="modos_de_pago active col-md-4 col-sm-4 col-xs-12"><p class="opcion_pago opcion_pago_anticipado">Opcion 1</p>
+																<div class="border">
+																<div class="header-pagos"><p><img src="images/10des.png"> PAGO ANTICIPADO</p></div>
+																	<div class="content">
+																		<div class="content-center display-details ">
+																			<h4 id="title-cupon"<p><span >(requiere pago por adelantado)</span></p></h4>
+																			
+																			<p class="operacion" id="ant_operacion_total"></p>
+																			<p class="operacion" id="ant_operacion_descuento"></p>
+																			<hr>
+																			<p class="operacion" id="ant_operacion_final"></p>
+
+																			<button type="button" class="btn btn-primary" id="btn-anticipado">Seleccionar</button>
+																		</div>
+																	</div>
+																		
+																</div>
+																</div>
+		
+																<div id="modo_pago_convenio" class="modos_de_pago active col-md-4 col-sm-4 col-xs-12"><p class="opcion_pago opcion_pago_convenio">Opcion 2</p>
+																<div class="border">
+																<div class="header-pagos"><p><img src="images/descuento.png"> CONVENIO</p></div>
+																	<div class="content">
+																		<div class="content-center display-details ">
+																			<h4 id="title-cupon"<p><span >(requiere pago por adelantado)</span></p></h4>
+																			<p class="descuento_anticipado texto-azul"><span class="desc-convenio"></span><span class="texto-verde simbolo-pc">%</span> <br><span class="texto-verde texto-lineal ">de descuento</span></p>
+																			<p class="operacion" id="conv_operacion_total"></p>
+																			<p class="operacion" id="conv_operacion_descuento"></p>
+																			<hr>
+																			<p class="operacion" id="conv_operacion_final"></p>
+
+																			<button type="button" class="btn btn-primary" id="btn-convenio">Seleccionar</button>
+																		</div>
+																	</div>
+																		
+																</div>
+																</div>
+		
+																<div id="anticipado-cupon" class="modos_de_pago active col-md-4 col-sm-4 col-xs-12"><p class="opcion_pago opcion_pago_cpon">Opcion 2</p>
+																<div class="border">
+																<div class="header-pagos"><p><img src="images/cupon.png"> USAR CUPÓN</p></div>
+																<div class="content">
+																	<div class="content-center display-details ">
+																	<h4 id="title-cupon"<p><span >(requiere pago por adelantado)</span></p></h4>
+																		<div id="datoscupon" class="">
+																					<input type="text" name="cupon" id="cupon"><br>
+																					<button type="button" class="btn btn-primary" id="btn-cupon">Validar cupón</button>
+																			</div>
+																			<div id="div_cupon_valido" class="">
+																				<p class="mensajecupon"></p>
+																				<p class="operacion" id="cup_operacion_total"></p>
+																				<p class="operacion" id="cup_operacion_descuento"></p>
+																				<hr>
+																				<p class="operacion" id="cup_operacion_final"></p>
+																				<button type="button" class="btn btn-primary" id="btn-cupon_2">Aplicar descuento</button>
+																			</div>	
+																			<div id="espera_cupon">
+																					<p class="center"><img src="images/cargando.gif"></p>
+																			</div>
+																	</div>
+																</div>
+																	
+																</div>
+																</div>
+																
+
+																<div id="regular" class="modos_de_pago active col-md-4 col-sm-4 col-xs-12"><p class="opcion_pago opcion_pago_regular">Opcion 3</p>
+																<div class="border">
+																<div class="header-pagos"><p><img src="images/dinero.png"> PAGO CONTRAENTREGA</p></div>
+																<div class="content">
+																	<div class="content-center display-details ">
+																	<h4><p><span >(precio regular, no aplican promociones)</span></p></h4>
+																	
+																			<p class="operacion" id="reg_operacion_final"></p>
+
+																			<button type="button" class="btn btn-primary" id="btn-regular">Seleccionar</button>
+																		
+																	</div>
+																</div>
+																	
+																</div>
+																</div>
+
+
+															</div>
+
+
+
+
+														<!--	<div id="modo_de_pago">
+																
+																<div id="anticipado" class="modos_de_pago active">
+																	<div class="display-details">
+																		<h3>Anticipado</h3>
+																		<p>(10% de descuento)</p>
+																		<button type="button" class="btn btn-primary" id="btn-anticipado">Seleccionar</button>
+																	</div>
+																	<h3 class="display-title">
+																		Anticipado
+																	</h3>
+																</div>
+																<div id="regular" class="modos_de_pago">
+																	<div class="display-details">
+																		<h3>Contraentrega</h3>
+																		<div id="datoscupon">
+																			<p>Si tienes un cupón utilizalo</p>
+																			<input type="text" name="cupon" id="cupon"><br>
+																			<button type="button" class="btn btn-primary" id="btn-cupon">Validar cupón</button>
+																		</div>
+																		<div id="espera_cupon">
+																				<p class="center"><img src="images/cargando.gif"></p>
+																		</div>
+																		<div id="div_cupon_valido">
+																			<p id="mensajecupon"></p><br>
+																			<button type="button" class="btn btn-primary" id="btn-cupon_2">Aplicar descuento</button>
+																		</div>
+																	</div>
+																	<h3 class="display-title">
+																		Contraentrega
+																	</h3>
+																</div>
+															</div> -->
+															<br>
+												  </div>
+					                        	</div>
+					                        </div>
+					                       </div>
+			                       	
+			                       	</div>                            
+			                     <div class="panel-footer">
+			                            <div class="row text-center">
+			                                 <div class="col-xs-12">
+			                                 		<p class="botones-finales"><button type="button" class="btn btn-primary" id="btn-editar-pedido">Editar pedido</button> <button type="button" class="btn btn-primary inactive" id="btn-confirmar-pedido">Siguiente</button> </p>
+				          					      
+												
+											 </div>
+			                            </div>
+			                        </div>                    		
+			                </div>
+							
+							
+
+								
+							</div>
+
+					</div>
+
+
+
+
+					<div id="slide8"  class="contenedor-slide">
+						
+						
+							<div class="panel panel-info panel_slide8">
+			                        <div class="panel-heading heading-direcciones">
+			                            <div class="panel-title">
+			                                <div class="row">
+			                                    <div class="col-xs-12">
+									             	<div class="back" data-destino="slidehome"><i class="fa fa-chevron-left" aria-hidden="true"></i></div>DIRECCIONES <div class="avatar"><img src="images/avatar.png"></div>
+									             	
+
+									             	 
+						                        </div>
+			                                </div>
+			                            </div>
+			                        </div>
+			                        <div class="title-direccion">
+																<p>Asegurate que tu dirección es correcta</p>
+														</div>
+			                        <div class="panel-body" id="tbl_producto">
+			                        	<div class="1_row row index">
+			                        		<div class="col-xs-12">
+			                        			<div class="row">
+			                        				<div class="col-sm-12">
+												
+												<div id="header-direccion">
+
+													<p class="title_paso paso_1-title">PASO</p>
+													<p class="number_paso paso_1-number">1</p>
+													<div class="back_pagos"> <i class="fa fa-arrow-left" aria-hidden="true"></i> </div>
+													<p class="title_paso back_pagos-title">PASO</p>
+													<p class="number_paso back_pagos-number"><a href="#direccion" class="step">3</a> <a href="#agregar_productos" class="current-step">4</a> <a href="#none" class="step">&nbsp;</a> </p>
+													<p class="instruccion">¿A dónde quieres que vayamos por tus prendas?<br><span class="subtitle">(Puedes agregar y guardar varias direcciones)<span></p>
+			                        					<p>Tus direcciones guardadas : </p>
+			                        					<div id="lista-direcciones"> </div>
+			                        					<div id="agregar-registro" class=" direccion_nueva"> <i class="fa fa-plus" aria-hidden="true"></i> <span  class="text-new-dir">AÑADIR NUEVA DIRECCIÓN</span> </div>
+															
+
+												</div>			
+
+
+
+														 
+														    
+
+
+
+
+
+
+														
+														<div class="container-direccion">
+															
+															<div class="col-xs-12 new_dir_nombre-container">
+																<input type="text" class="form-control new_dir_nombre" placeholder="Guardar como: casa, oficina, etc" class="" aria-describedby="basic-addon1">
+																<div class="container-address"></div>
+															</div>
+															<div class="col-xs-12">
+				                        					<select Class="reg_estado form-control select-select2"  required aria-describedby="basic-addon1"  placeholder="Estado">
+				                        						<option value="0">Estado</option>
+				                        					</select>
+															</div>
+				                        					<div class="col-xs-12">
+				                        					<select Class="reg_municipio form-control select-select2"  required aria-describedby="basic-addon1"  placeholder="Delegación/municipio">
+				                        						<option value="0">Delegación/Municipio</option>
+				                        					</select>
+															</div>
+															<div class="col-xs-12 content-colonia">
+															<p class="error_colonia">Selecciona una colonia de la lsita</p>
+															  
+																  <input type="text" class="form-control buscarcolonia reg_colonia" placeholder="Colonia" Class="" autocomplete="off" required aria-describedby="basic-addon1">
+																  <div class="container-colonias-results"></div>
+															</div>
+															<div class=" col-xs-12">
+																  <input type="text" class="form-control codigopostal" placeholder="Código postal" id="" aria-describedby="basic-addon1">
+															</div>
+															<div class="col-xs-12">
+															 <input type="text" class="form-control calle" placeholder="Calle" Class="" required aria-describedby="basic-addon1">
+															</div>	  
+															<div class="col-xs-12">
+																		<input type="text" class="form-control num_exterior" placeholder="N° exterior" id="" aria-describedby="basic-addon1"> 
+															</div>
+															<div class="col-xs-12">
+																		<input type="text" class="form-control num_interior" placeholder="N° interior" id="" aria-describedby="basic-addon1">
+															</div>
+															<div class=" col-xs-6 calles-div">
+																  <input type="text" class="form-control alter_calle_1" placeholder="Entre calle" id="" aria-describedby="basic-addon1"> 
+																 </div>
+															<div class=" col-xs-6 calles-div">
+																  <input type="text" class="form-control alter_calle_2" placeholder="y calle" id="" aria-describedby="basic-addon1">
+															</div>
+															<div class="col-xs-12 ">
+																  <textarea class="form-control referencias" rows="3" id="" placeholder="Referencias visuales:"></textarea>
+															</div>
+															</div>
+														
+															<button type="button" class="btn btn-primary btn-confirmar-direccion-nueva-avanzar"> Confirmar</button> 
+															<button type="button" class="btn btn-primary btn-confirmar-direccion-existente-avanzar"> Confirmar</button> 
+														
+														</div>
+
+
+														<div class="panel-heading heading-detalles-recoleccion">
+								                            <div class="panel-title">
+								                                <div class="row">
+								                                    <div class="col-xs-12">
+														             	Detalles de la recolección
+														             	 
+											                        </div>
+								                                </div>
+								                            </div>
+								                        </div>
+
+													
+														
+				          						    
+				          						</div>    
+					                        </div>
+					                   </div>
+			                     
+			                       	</div>                            
+			                                  		
+			                </div>
+
+						
+					</div>
+					
+					
+					<div id="slide-detalles-pedido" class="contenedor-slide ">
+						
+							<div class="panel panel-info panel_slide9">
+			                        <div class="panel panel-info panel_slide9">
+			                        <div class="panel-heading back-blue">
+			                            <div class="panel-title">
+			                                <div class="row">
+			                                    <div class="col-xs-12">
+			                                    	 <div class="back hacer_pedido"  data-destino="slide8"><i class="fa fa-chevron-left" aria-hidden="true"></i></div>RUTA Y FRECUENCIA<div class="avatar"><img src="images/avatar.png"></div>
+			                                    </div>
+			                                </div>
+			                            </div>
+			                        </div>
+			                        <div class="panel-body" id="tbl_producto">
+			                        	<div class="1_row row index">
+			                        		<p class="title_paso paso_2-title">PASO</p>
+													<p class="number_paso paso_1-number">2</p>
+													<div class="back_pagos"> <i class="fa fa-arrow-left" aria-hidden="true"></i> </div>
+													
+													<p class="instruccion">Detalles de la recolección</p>
+			                        			<div class="contenedor-detalles-pedido">
+			                        				
+															<div class="row">
+																<div class=" col-xs-6 ">
+																	  <span class="input-group-addon except" id="basic-addon1"> ¿En qué día haremos<br>la recolección?</span> 
+																</div>
+																<div class="col-xs-6">
+																<!--En esta ruta la recolección solo se<br> realiza los días <span id="dias_de_servicio"></span><br>-->
+																<span style="position: relative;"><input type="text" readonly="true" placeholder="--/--/----" id="datepicker"><i class="fa fa-calendar" aria-hidden="true"></i></span>
+																	<label  class="no-display radio-inline"><input value="" type="radio" name="optradio" checked="checked" class="dias no-display " id="dia_1"><span class="no-display " id="span_dia1"></span></label>
+																	<label class="radio-inline no-display"><input value="" type="radio" name="optradio" class="dias no-display " id="dia_2"><span class="no-display"  id="span_dia2"></span></label>
+																</div>
+																<div class="col-xs-12 hr">&nbsp;</div>
+																<div class="col-xs-6">
+																	<span class="input-group-addon except" id="basic-addon1"> ¿En qué horario haremos<br> la recolección?</span> 
+																</div>
+																<div class="col-xs-6">
+																	<div class="row">
+																	<div class="col-ms-6 div-horario">
+																	<span style="position: relative;">
+																	<select id="hora_recoleccion">
+																		<option value="libre" selected> <img src="images/reloj.png"> Horario Libre</option>
+																		<option value="matutino"> <img src="images/reloj.png"> Matutino</option>
+																		<option value="vespertino"> <img src="images/reloj.png"> Vespertino</option>
+																		<option value="otro"> <img src="images/reloj.png"> Horario Específico</option>
+																	</select><i class="fa fa-clock-o" aria-hidden="true"></i>
+																	</span>
+																	</div>
+																	
+																	<div class="col-xs-12 div-horas"><img class="img-reloj" src="images/reloj.png">
+																	 <select id="horarios">
+																		<option value="hora1" selected> <img src="images/reloj.png"> 9:00 - 11:00</option>
+																		<option value="hora2"> <img src="images/reloj.png"> 11:00 - 13:00</option>
+																		<option value="hora3"> <img src="images/reloj.png"> 13:00 - 15:00</option>
+																		<option value="hora4"> <img src="images/reloj.png"> 15:00 - 17:00</option>
+																		<option value="hora5"> <img src="images/reloj.png"> 17:00 - 19:00</option>
+																	</select></div></div>
+																</div>
+																<div class="col-xs-12 hr">&nbsp;</div>
+																<div class="col-xs-6">
+																	<span class="input-group-addon except" id="basic-addon1"> ¿Con qué frecuencia<br>quieres que te visitemos?</span> 
+																</div>
+																<div class="col-xs-6">
+																<div class="row">
+																<span style="position: relative;">
+																<select id="frecuencia">
+																		<option value="única" selected> <img src="images/reloj.png"> Solo esta vez</option>
+																		<option value="semanal"> <img src="images/reloj.png"> Semanal</option>
+																		<option value="quincenal"> <img src="images/reloj.png"> Quincenal</option>
+																</select><i class="fa fa-repeat" aria-hidden="true"></i>
+																</span>	
+																</div>
+																</div>
+																<div class="col-xs-12 hr">&nbsp;</div>
+															
+																<div class="col-xs-6">
+																	<span class="input-group-addon except" id="basic-addon1"> ¿Quién entregará<br>tus prendas</span> 
+																</div>	
+																<div class="col-xs-6">
+																	<div class="row">
+																	<span style="position: relative;"><select id="recibe">
+																		<option value="yo" selected> <img src="images/reloj.png"> Yo</option>
+																		<option value="otro"> <img src="images/reloj.png"> Alguien más</option>
+																	</select><i class="fa fa-user" aria-hidden="true"></i>
+																	</span>
+																	</div>
+																	
+
+																</div>
+																<div class="col-xs-12 div-recibe">
+																	<div class="col-xs-6"><label class="radio-inline especifica" >Es mi: <input value="" type="text" name="parentesco" class="parentesco" placeholder:="Chofer, Portero, Hermana" id="parentesco"></label></div>
+																	<div class="col-xs-6"><label class="radio-inline especifica" >Nombre: <input value="" type="text" name="especifica" class="especifica" id="especifica"></label><br></div>
+																	
+																</div>
+
+														
+														</div>
+														<div class="col-xs-12 hr">&nbsp;</div>
+														
+														<div id="contenedor-especificaciones" class="active col-md-12">
+															
+															<textarea placeholder="Comentarios adicionales" class="form-control" id="input-especificaciones" rows="3"></textarea>
+														</div>
+
+														</div>		
+
+					                       </div>
+			                       	</div>                            
+			                                   		
+			               			</div>
+
+			                                        		
+			                </div>
+			                 <div class="panel-footer">
+			                            <div class="row text-center">
+			                                
+			                                <div class="col-xs-12">
+												<div class="contenedor-detalles-pedido">
+												<button type="button" class="btn boton-verde btn-primary" id="btn-confirmar-detalles"><i class="fa fa-arrow-right" aria-hidden="true"></i></button> 
+												</div>	                                    
+			                                </div>
+			                            </div>
+			                        </div>      
+
+					</div>	
+
+					
+					<div id="slide1"  class="contenedor-slide">
+						<div class="panel panel-info panel_slide1">
+			             
+							<div class="panel-heading">
+			                            <div class="panel-title">
+			                                <div class="row">
+			                                    <div class="col-xs-12">
+			                                       Ingresa tu codigo postal, para verificar disponibilidad de servicio
+			                                    </div>
+
+			                                </div>
+			                            </div>
+			                        </div>
+			                        <div class="panel-body" id="tbl_producto">
+			                        	<div class="1_row row index">
+			                        		<div class="col-xs-12">
+			                        			<div class="row">
+			                        				<div class="col-sm-12">
+				                        				<div class="form-group">
+				                        					  <input type="number" min="0" max="99999" class="form-control noinline-input place-holder-blanco texto-blanco" placeholder="Código Postal" id="codigo_postal" aria-describedby="basic-addon1">
+				                        				</div>
+					                        		</div>
+					                        	</div>
+					                        </div>
+					                       </div>
+			                      
+			                       	</div>                            
+			                     <div class="panel-footer">
+			                            <div class="row text-center">
+			                                
+			                                <div class="col-xs-12">
+											 <button type="button" class="btn btn-primary none-float boton-verde" id="codigo_postal_btn">Comprobar</button>
+			                                    
+			                                </div>
+			                            </div>
+			                     </div>    
+						 </div> 
+
+					</div>
+
+
+
+					<div id="slide10"  class="contenedor-slide back-blue">
+							<form id="form-registro">
+							<div class="panel panel-info panel_slide10">
+			                        <div class="panel-heading">
+			                            <div class="panel-title">
+			                                <div class="row">
+			                                    <div class="col-xs-12">
+			                                       <div class="back" data-destino="slide9"><i class="fa fa-chevron-left" aria-hidden="true"></i></div>REGÍSTRATE
+
+			                                    </div>
+
+			                                </div>
+			                            </div>
+			                        </div>
+			                        <div class="panel-body back-blue" id="tbl_producto">
+			                        	<div class="1_row row index">
+			                        		<div class="col-xs-12">
+			                        			<div class="row">
+			                        			<div id="register-facebook"><i class="fa fa-facebook" aria-hidden="true"></i><p>Regístrate con Facebook</p></div>
+												<div id="divisor" class="row">
+			                        			<div class="col-xs-3"><hr></div><div class="col-xs-6">o a través de una cuenta de email</div><div class="col-xs-3"><hr></div>					</div>
+			                        				
+			                        				<div class="col-sm-12">
+			                        					
+				                        				<div class="input-group">
+															  
+															  <input type="text" class="form-control reg_nombre borde-top" id="reg_nombre" placeholder="Nombre"  required aria-describedby="basic-addon1">
+														</div>
+														<div class="input-group">
+															  
+															  <input type="text" class="form-control reg_apellidos borde-top" id="reg_apellidos" placeholder="Apellidos"  required  aria-describedby="basic-addon1">
+														</div>
+														<div class="input-group">
+															   <input type="date" class="form-control reg_birthday borde-top" id="reg_birthday" placeholder="Fecha de nacimiento"  required  aria-describedby="basic-addon1">
+															   <select id="reg_genero">
+															  	<option value="">Género</option>
+															  	<option value="Masculino">Masculino</option>
+															  	<option value="Femenino">Femenino</option>
+															  </select>
+															 
+														</div>
+														<div class="input-group">
+															 
+															  <input type="email" class="form-control reg_correo " id="reg_correo" placeholder="Correo" style="text-transform: inherit"   required  aria-describedby="basic-addon1">
+															  <input type="hidden" class="form-control reg_img " id="reg_img"  required >
+
+														</div>
+														<div class="input-group">
+															  
+															  <input type="tel" class="form-control telefono reg_telefono borde-top" placeholder="Telefono fijo"    min="8" max="13" aria-describedby="basic-addon1">
+														</div>
+														<p class="error error_tel_fijo">Este teléfono parece inválido, corrígelo o intenta con el móvil</p>
+														<div  class="error_tel alert alert-danger">
+															  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+															  * Introduce al menos un teléfono.
+														</div>
+
+														<div class="input-group">
+															  
+															  <input type="tel" class="form-control telefono reg_telefono_celular" placeholder="Telefono celular"  min="13" max="15"  aria-describedby="basic-addon1">
+														</div>
+														<p class="error error_tel_cel">Este teléfono parece inválido, corrigelo o intenta con el fijo</p>
+														<p class="error error_telefonos">Debes introducir almenos un teléfono válido</p>
+														
+														
+														<p class="error error_mail">Este correo tiene un formato inválido</p>
+														
+														<div id="error_correo" class="alert alert-danger">
+															  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+															  * Ya está registrado este correo.
+														</div>
+														<div class="input-group">
+															
+															  <input type="password" class="form-control reg_password" placeholder="Contraseña"   style="text-transform: inherit" Class="reg_password" required aria-describedby="basic-addon1">
+															 
+														</div>
+														<div class="input-group">
+															  <input type="password" class="form-control reg_confirm_password" placeholder="Confirmar contraseña"   style="text-transform: inherit" Class="reg_confirm_password" required  aria-describedby="basic-addon1">
+														</div>
+														<span id="error_password">* Las contrseñas deben coincidir.</span>
+														
+										<!--				<div class="input-group">
+															<p>Si trabajas en una empresa que tiene convenio con nosotros introduce el código que te proporcionaron.</p>		
+															<input type="text" class="form-control" placeholder="Código de convenio"   style="text-transform: inherit" Class="reg_convenio"  aria-describedby="basic-addon1">
+														</div>
+														<span id="error_convenio">* Código inválido.</span>
+														-->
+														
+														<div class="input-group">
+															  <p class="aviso align-right"><input type="checkbox" class="form-control reg_aviso"   required  >Acepto <a href="#" class="text-green abrir-aviso">Aviso de Privacidad</a></p>
+														</div>
+				          					        </div>
+					                        	</div>
+					                        </div>
+					                       </div>
+			                       	</div>        
+									
+						<!--		<div class="panel-heading panel-direccion">
+			                            <div class="panel-title">
+			                                <div class="row">
+			                                    <div class="col-xs-12">
+			                                      Dirección
+
+			                                    </div>
+
+			                                </div>
+			                            </div>
+			                        </div>
+								<div class="panel-body" id="tbl_producto">
+			                        	<div class="1_row row index">
+			                        		<div class="col-xs-12">
+			                        			<div class="row">
+			                        				<div class="col-sm-12">
+			                        					
+			                        					<div class="col-md-6">
+			                        					<select Class="reg_estado reg_estado_reg form-control"  required aria-describedby="basic-addon1"  placeholder="Estado">
+				                        						<option value="0">Estado</option>
+				                        					</select>
+															</div>
+				                        					<div class="col-md-6">
+				                        					<select Class="reg_municipio reg_municipio_reg form-control"  required aria-describedby="basic-addon1"  placeholder="Delegación/municipio">
+				                        						<option value="0">Delegación/Municipio</option>
+				                        					</select>
+														</div>
+														<div class="input-group content-colonia">
+																<p class="error_colonia">Selecciona una colonia de la lista</p>
+															  <input type="text" class="form-control buscarcolonia  reg_colonia_reg" placeholder="Colonia" Class="" autocomplete="off" required aria-describedby="basic-addon1">
+															  <div class="container-colonias-results"></div>
+														</div>
+														<div class="input-group">
+															  <input type="text" class="form-control reg_codigo_postal" placeholder="C.P." Class="" disabled required aria-describedby="basic-addon1">
+														</div>
+														<div class="input-group">
+															 <input type="text" class="form-control reg_calle" placeholder="Calle" Class="" required aria-describedby="basic-addon1">
+														</div>	  
+														<div class="input-group">
+															<div style="padding-left:0px" class=" col-md-6 col-sm-6 col-xs-6 ">
+																 <input type="number" class="form-control reg_num_exterior" placeholder="N° Exterior" Class="" required aria-describedby="basic-addon1">
+															</div>
+															<div style="padding-right:0px" class=" col-md-6 col-sm-6 col-xs-6">
+																 <input type="text"  class="form-control reg_num_interior" placeholder="N° Interior" Class=""  aria-describedby="basic-addon1">
+															</div>
+														</div>
+														
+														<div class=" col-md-6 ">
+															  <input type="text" class="form-control reg_calle_1" placeholder="Entre calle" Class="" required aria-describedby="basic-addon1"> 
+														</div>
+														<div class=" col-md-6 ">
+															  <input type="text" class="form-control reg_calle_2" placeholder="y calle" Class="" required aria-describedby="basic-addon1">
+														</div>
+														<div class="input-group content_detalles">
+															  <input type="text" class="form-control reg_detalles" placeholder="Referencias visuales:" Class="" required required aria-describedby="basic-addon1">
+														</div>
+														<div class="input-group ">
+															  <input type="text" class="form-control reg_nombre_direccion" placeholder="Guardar como: casa, oficina, etc" Class="" required aria-describedby="basic-addon1">
+														</div>
+														
+														<span id="captcha"></span>
+														<div class="g-recaptcha" data-sitekey="6LfAuiYTAAAAAFawG96V8s2jZ93zQjHWZ35PtIsl"></div>
+
+
+														-->
+
+															 <input type="submit" class="submitreal" id="submit-registro" style="display: none">
+														
+														<!--
+
+
+				          					        </div>
+					                        	</div>
+					                        </div>
+					                       </div>
+			                       	</div>        
+								-->
+			                     <div class="panel-footer">
+			                            <div class="row text-center">
+			                                
+			                                <div class="col-xs-12">
+											
+											<button type="button" class="btn btn-primary" id="btn-enviar_registro">REGÍSTRATE</button>
+											<!--<button type="button" class="btn btn-primary" id="ya_tengo_cuenta"> <img src="images/flecha-atras.png"> Volver</button>-->
+														                                    
+			                                </div>
+			                            </div>
+			                        </div>                    		
+			                </div>
+			                </form>
+						</div>
+
+						<div id="slide11"  class="contenedor-slide">
+							
+							<div class="panel panel-info panel_slide1">
+			                        <div class="panel-heading">
+			                            <div class="panel-title">
+			                                <div class="row">
+			                                    <div class="col-xs-12">
+			                                      	<p>Hemos enviado un código de validación a tu correo(puede tardar hasta 5 minutos en llegar, no cierres esta ventana), introducelo en el siguiente campo para continuar con tu pedido<p>
+			                                    </div>
+
+			                                </div>
+			                            </div>
+			                        </div>
+			                        <div class="panel-body" id="tbl_producto">
+			                        	<div class="1_row row index">
+			                        		<div class="col-xs-12">
+			                        			<div class="row">
+			                        				<div class="col-sm-12">
+														<div class="input-group">
+															  
+															  <input type="text" class="form-control" placeholder="Introduce el código aquí" id="codigo_validar_cuenta" aria-describedby="basic-addon1">
+														</div>
+				          					        </div>
+					                        	</div>
+					                        </div>
+					                       </div>
+			                       
+			                       	</div>                            
+			                     <div class="panel-footer">
+			                            <div class="row text-center">
+			                                <div class="col-xs-12">
+												<button type="button" class="btn btn-primary" id="btn-validar-cuenta">Validar</button>		                                    
+			                                </div>
+			                            </div>
+			                        </div>                    		
+			                </div>
+
+						</div>
+
+
+
+
+					<div id="slide12"  class="contenedor-slide">
+							<div class="panel panel-info panel_slide1">
+			                        <div class="panel-heading">
+			                            <div class="panel-title">
+			                                <div class="row">
+			                                    <div class="col-xs-12">
+			                                      	<p>Introduce un nombre para guardar esta dirección<p>
+			                                    </div>
+
+			                                </div>
+			                            </div>
+			                        </div>
+			                        <div class="panel-body" id="tbl_producto">
+			                        	<div class="1_row row index">
+			                        		<div class="col-xs-12">
+			                        			<div class="row">
+			                        				<div class="col-sm-12">
+														<div class="input-group">
+															  
+															  <input type="text" class="form-control" placeholder="Guardar como:" id="nombre_en_agenda" aria-describedby="basic-addon1">
+														</div>
+				          					        </div>
+					                        	</div>
+					                        </div>
+					                       </div>
+			                      
+			                       	</div>                            
+			                	    <div class="panel-footer">
+			                            <div class="row text-center">
+			                                <div class="col-xs-12">
+												<button type="button" class="btn btn-primary" id="btn-guardar_direccion_nueva">Guardar</button>		                                    
+			                                </div>
+			                            </div>
+			                        </div>                    		
+			                </div>
+
+					</div>
+
+					<div id="slide13"  class="contenedor-slide">
+							<div class="panel panel-info panel_slide1">
+			                        <div class="panel-heading back-blue">
+			                            <div class="panel-title">
+			                                <div class="row">
+			                                    <div class="col-xs-12">
+			                                    	 <div class="back" data-destino="slide-detalles-pedido"><i class="fa fa-chevron-left" aria-hidden="true"></i></div>CONFIRMACIÓN<div class="avatar"><img src="images/avatar.png"></div>
+			                                    </div>
+
+			                                </div>
+			                            </div>
+			                        </div>
+			                        <div class="panel-body" id="tbl_producto">
+			                        	<div class="1_row row index">
+			                        		<div class="col-xs-12">
+			                        			<div class="row">
+			                        				<div class="col-sm-12">
+			                        				<p class="title_paso paso_3-title">PASO</p>
+													<p class="number_paso paso_3-number">3</p>
+													<p class="instruccion">Revisa y confirma</p>
+												<!--	<div class="back_pagos"> <i class="fa fa-arrow-left" aria-hidden="true"></i> </div>
+													
+													<p class="instruccion">Detalles de la recolección</p>
+			                        				<div id="resumenfinal-2">
+															Hemos recibido exitosamente tu solicitud y ya estamos trabajando en ella. <br><span class="back-text">¡Vuelve Pronto!</span> 
+														</div>-->
+														<div id="resumenfinal">
+																	
+														</div>
+														
+				          					        </div>
+					                        	</div>
+					                        </div>
+					                       </div>
+			                 
+			                       	</div>                            
+			                	    <div class="panel-footer">
+			                            <div class="row text-center">
+			                                <!--<div class="col-xs-12 div-precio-final">
+												<span class="texto-verde label-precio-final">Total:</span> $<span id="precio-recibo-final"></span>		                                    
+			                                </div>-->
+			                                <div class="col-xs-12 ">
+												<span id="precio-recibo-final"></span><button type="button" class="btn btn-primary" id="guardar-pedido">Confirmar</button>	
+				                            	<!--<button type="button" class="btn btn-primary" id="btn-cancelar">Cancelar</button><button type="button" class="btn btn-primary" id="cancelar-pedido">Cancelar</button>	-->
+				                            </div>
+			                             </div>
+			                        </div>                    		
+			                </div>
+					</div>
+					
+		
+					
+						<div id="slide14"  class="contenedor-slide">
+							<div class="panel panel-info panel_slide1">
+			                        <div class="panel-heading back-blue">
+			                            <div class="panel-title">
+			                                <div class="row">
+			                                    <div class="col-xs-12">
+			                                     HECHO<div class="avatar"><img src="images/avatar.png"></div>
+			                                      	
+			                                    </div>
+
+			                                </div>
+			                            </div>
+			                        </div>
+			                        <div class="panel-body" id="tbl_producto">
+			                        	<div class="1_row row index">
+			                        		<div class="col-xs-12">
+			                        			<div class="row">
+			                        				<div class="col-sm-12">
+			                        				<p><img src="images/paloma-2.png"> </p>
+			                                      	<p  class="title-pedido-exitoso satisfy texto-verde">Pedido exitoso:<p>
+														<div id="resumenfinal-2">
+															<br><span class="text-blue"># DE TICKET: </span><span class="num-ticket"></span> 
+														</div>
+				          					        </div>
+					                        	</div>
+					                        </div>
+					                       </div>
+			                       	</div>                            
+			                	    <div class="panel-footer">
+			                            <div class="row text-center">
+			                                <div class="col-xs-12">
+												<span id="precio-recibo-final"></span><button type="button" class="btn btn-primary" id="ver-perdidos">HISTORIAL DE<br>PEDIDOS</button>	
+				                            	<!--<button type="button" class="btn btn-primary" id="btn-cancelar">Cancelar</button>--><button type="button" class="btn btn-primary" id="btn-inicio">INICIO</button>	                                    
+			                                </div>
+			                            </div>
+			                        </div>                    		
+			                </div>
+						</div>
+					
+						
+						<div id="slide15"  class="contenedor-slide">
+							
+							<div class="panel panel-info panel_slide15">
+			                        <div class="panel-heading">
+			                            <div class="panel-title">
+			                                <div class="row">
+			                                    <div class="col-xs-12">
+			                                      <div class="back" data-destino="slidehome"><i class="fa fa-home" aria-hidden="true"></i></div>MI PERFIL
+
+			                                    </div>
+
+			                                </div>
+			                            </div>
+			                        </div>
+			                        <div class="panel-body" id="tbl_producto">
+			                        	<div class="1_row row index">
+			                        		<div class="col-xs-12">
+			                        			<div class="row">
+			                        				<div class="col-sm-12">
+														
+															
+														<form id="uploadimage" action="" method="post" style="display: none" enctype="multipart/form-data">
+        <hr id="line">    
+			<div id="selectImage">
+				<label>Select Your Image</label><br>
+                <input type="file" name="file" id="file" required="" style="color: green;">
+				<input type="submit" value="Upload" class="submit">
+            </div>                   
+			</form>
+
+														<form id="form-edit-perfil">
+			                        					<div class="avatar-perfil avatar"><img src="images/avatar.png"></div>
+			                        					<div class="col-xs-6">
+			                        						  <input type="text" class="form-control" placeholder="Nombre" id="edit_nombre" required aria-describedby="basic-addon1">
+														</div>
+														<div class="col-xs-6">
+			                        						  <input type="text" class="form-control" placeholder="Apellidos" id="edit_apellidos" required  aria-describedby="basic-addon1">
+														</div>
+														<div class="col-xs-6">
+			                        					
+															  <input type="tel" class="form-control telefono" placeholder="Telefono fijo" id="edit_telefono"   aria-describedby="basic-addon1">
+														</div>	  
+														<div class="col-xs-6">
+			                        						  <input type="tel" class="form-control telefono" placeholder="Telefono celular" id="edit_telefono_celular"   aria-describedby="basic-addon1">
+														</div>	
+														<div class="col-xs-12">
+			                        						   <input type="email" class="form-control correo" placeholder="correo" id="edit_correo"  aria-describedby="basic-addon1">
+															   <input type="hidden" class="form-control nombre_imagen" aria-describedby="basic-addon1">
+														</div>
+														
+														<div class="col-xs-6">
+			                        						  <input type="text" class="form-control reg_password" placeholder="Contraseña"   style="text-transform: inherit" id="edit_password" required aria-describedby="basic-addon1">
+														</div>
+														<div class="col-xs-6">
+			                        						  <input type="text" class="form-control reg_convenio" placeholder="Código"   style="text-transform: inherit" id="edit_convenio" required aria-describedby="basic-addon1">
+														</div>
+														
+													</div>
+					                        	</div>
+					                        </div>
+					                       </div>
+			                       	</div>        
+							
+			                     <div class="panel-footer">
+			                            <div class="row text-center">
+			                                
+			                                <div class="col-xs-12">
+											
+											<button type="button" class="btn btn-primary" id="btn-guardar-perfil">  <img  class="palomita" src="images/paloma.png"> </button>
+
+											<li id="cerrar_sesion"><span>Cerrar sesión</li></span></ul>
+														                                    
+			                                </div>
+			                            </div>
+			                        </div>                    		
+			                </div>
+			                </form>
+						</div>
+					
+			
+
+
+					<!--<div id="slide16"  class="contenedor-slide">
+							<form id="form-edit-direcciones">
+							<p class="botones-direcciones-editar"> </p>
+							<div class="panel panel-info panel_slide16">
+			                  		<div class="panel-heading panel-direccion">
+			                            <div class="panel-title">
+			                                <div class="row">
+			                                    <div class="col-xs-12"> Datos de dirección  </div>
+			                                </div>
+			                            </div>
+			                        </div>
+								<div class="panel-body" id="tbl_producto">
+			                        	<div class="1_row row index">
+			                        		<div class="col-xs-12">
+			                        			<div class="row">
+			                        				<div class="col-sm-12">
+			                        					
+			                        					<div class="col-md-6">
+			                        					<select id="reg_estado" class="form-control"  required aria-describedby="basic-addon1"  placeholder="Estado">
+			                        						<option value="0">Estado</option>
+			                        					</select>
+														</div>
+														
+			                        					<div class="col-md-6">
+			                        					<select id="reg_municipio" class="form-control"  required aria-describedby="basic-addon1"  placeholder="Delegación/municipio">
+			                        						<option value="0">Delegación/Municipio</option>
+			                        					</select>
+														</div>
+														<div class="input-group">
+															  <input type="text" class="form-control buscarcolonia" placeholder="Colonia" id="reg_colonia" required aria-describedby="basic-addon1">
+															  <div class="container-colonias-results"></div>
+														</div>
+														<div class="input-group">
+															  <input type="text" class="form-control" placeholder="C.P." id="reg_codigo_postal" disabled required aria-describedby="basic-addon1">
+														</div>
+														<div class="input-group">
+															 <input type="text" class="form-control" placeholder="Calle" id="reg_calle" required aria-describedby="basic-addon1">
+														</div>	  
+														<div class="input-group">
+															<div style="padding-left:0px" class=" col-md-6 ">
+																 <input type="number" class="form-control" placeholder="N° Exterior" id="reg_num_exterior" required aria-describedby="basic-addon1">
+															</div>
+															<div style="padding-right:0px" class=" col-md-6 ">
+																 <input type="text"  class="form-control" placeholder="N° Interior" id="reg_num_interior"  aria-describedby="basic-addon1">
+															</div>
+														</div>
+														
+														<div class="input-group">
+															<div style="padding-left:0px" class=" col-md-6 ">
+																  <input type="text" class="form-control" placeholder="Entre calle" id="reg_calle_1" aria-describedby="basic-addon1"> 
+															</div>
+															<div style="padding-right:0px" class=" col-md-6 ">
+																  <input type="text" class="form-control" placeholder="y calle" id="reg_calle_2" aria-describedby="basic-addon1">
+															</div>
+														</div>
+
+														<div class="input-group">
+															  <input type="text" class="form-control" placeholder="Detalles" id="reg_detalles" required aria-describedby="basic-addon1">
+														</div>
+
+
+														
+
+
+														
+														
+																<button type="button" class="btn btn-primary disabled" id="btn-confirmar-direccion-nueva"><img src="images/palomita.png"> Confirmar</button> 
+																<button type="button" class="btn btn-primary disabled" id="btn-confirmar-direccion-existente"><img src="images/palomita.png"> Confirmar</button> 
+														
+
+				          					        </div>
+					                        	</div>
+					                        </div>
+					                       </div>
+			                       	</div>        
+
+			                     <div class="panel-footer">
+			                            <div class="row text-center">
+			                                
+			                                <div class="col-xs-12">
+											
+											<button type="button" class="btn btn-primary" id="btn-guardar-direcciones"> <img src="images/palomita.png"> </button>
+														                                    
+			                                </div>
+			                            </div>
+			                        </div>                    		
+			                </div>
+			                </form>
+						</div>-->
+
+
+						<div id="slide16"  class="contenedor-slide">
+							<div class="panel panel-info panel_slide16">
+			                        <div class="panel-heading">
+			                            <div class="panel-title">
+			                                <div class="row">
+			                                   <div class="col-xs-12">
+			                                    	 <div class="back" data-destino="slidehome"><i class="fa fa-home" aria-hidden="true"></i></div>DIRECCIONES<div class="avatar"><img src="images/avatar.png"></div>
+			                                    </div>
+			                                </div>
+			                            </div>
+			                        </div>
+			                        <div class="title-direccion">
+																<p>Asegurate que tu dirección es correcta</p>
+														</div>
+			                        <div class="panel-body" id="tbl_producto">
+			                        	<div class="1_row row index">
+			                        		<div class="col-xs-12">
+			                        			<div class="row">
+			                        				<div class="col-sm-12">
+
+			                        				<div id="header-direccion2">
+														<p>Tus direcciones guardadas: </p>
+			                        					<span id="lista-direcciones2"> </span>
+			                        					<div id="agregar-registro" class=" direccion_nueva"> <i class="fa fa-plus" aria-hidden="true"></i> <span class="text-new-dir">AÑADIR NUEVA DIRECCIÓN</span> </div>
+													</div>	
+			                        					
+														<div class="container-direccion">
+															
+															<div class="col-xs-12 new_dir_nombre-container">
+																<input type="text" class="form-control new_dir_nombre" placeholder="Guardar como: casa, oficina, etc" class="" aria-describedby="basic-addon1">
+																<div class="container-address"></div>
+															</div>
+															<div class="col-xs-12">
+				                        					<select Class="reg_estado form-control select-select2"  required aria-describedby="basic-addon1"  placeholder="Estado">
+				                        						<option value="0">Estado</option>
+				                        					</select>
+															</div>
+				                        					<div class="col-xs-12">
+				                        					<select Class="reg_municipio form-control select-select2"  required aria-describedby="basic-addon1"  placeholder="Delegación/municipio">
+				                        						<option value="0">Delegación/Municipio</option>
+				                        					</select>
+															</div>
+															<div class="col-xs-12 content-colonia">
+															<p class="error_colonia">Selecciona una colonia de la lista</p>
+															  
+																  <input type="text" class="form-control buscarcolonia reg_colonia" placeholder="Colonia" Class="" autocomplete="off" required aria-describedby="basic-addon1">
+																  <div class="container-colonias-results"></div>
+															</div>
+															<div class=" col-xs-12">
+																  <input type="text" class="form-control codigopostal" placeholder="Código postal" id="" aria-describedby="basic-addon1">
+															</div>
+															<div class="col-xs-12">
+															 <input type="text" class="form-control reg_calle" placeholder="Calle" Class="" required aria-describedby="basic-addon1">
+															</div>	  
+															<div class="col-xs-12">
+																		<input type="text" class="form-control num_exterior" placeholder="N° exterior" id="" aria-describedby="basic-addon1"> 
+															</div>
+															<div class="col-xs-12">
+																		<input type="text" class="form-control num_interior" placeholder="N° interior" id="" aria-describedby="basic-addon1">
+															</div>
+															<div class=" col-xs-6 ">
+																  <input type="text" class="form-control alter_calle_1" placeholder="Entre calle" id="" aria-describedby="basic-addon1"> 
+																 </div>
+															<div class=" col-xs-6 ">
+																  <input type="text" class="form-control alter_calle_2" placeholder="y calle" id="" aria-describedby="basic-addon1">
+															</div>
+															<div class="col-xs-12">
+																  <textarea class="form-control referencias" rows="3" id="" placeholder="Referencias visuales:"></textarea>
+															</div>
+															
+																
+														</div>
+															<button type="button" class="btn btn-primary btn-confirmar-direccion-nueva"><img src="images/palomita.png"> Confirmar</button> 
+																<button type="button" class="btn btn-primary btn-confirmar-direccion-existente"><img src="images/palomita.png"> Confirmar</button> 
+				          						    </div>
+				          						</div>    
+					                        </div>
+					                   </div>
+			                     
+			                       	</div>                            
+			                    
+						                 		
+			                </div>
+
+						
+					</div>
+					
+
+
+
+
+
+					</div>
+			<!--		
+					
+<div class="modal fade aviso-modal">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                      </button>
+                      <h4 class="modal-title">Aviso de privacidad</h4>
+                    </div>
+                    <div class="modal-body">
+                    <p>Texto simulado aviso de privacidad</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+-->
+
+
+</div>	
+<footer>
+	<div class="container">
+		<p> </p>
+	</div>
+</footer>
+<link rel="stylesheet" type="text/css" href="js/stackeable/stacktable.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="assets/bootstrap-tables/bootstrap-table.css">
+<script type="text/javascript" src="js/jquery-3.0.0.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+<script src="assets/star-rating/js/star-rating.js" type="text/javascript"></script>
+<script type="text/javascript" src="js/stackeable/stacktable.js"></script>
+<script type="text/javascript" src="assets/bootstrap-tables/bootstrap-table.js"></script>
+<script type="text/javascript" src="assets/bootstrap-tables/locale/bootstrap-table-es-ES.js"></script>
+<script src="js/jquery-ui/jquery-ui.js"></script>
+<script>
+
+var scopes= "email, user_friends";
+
+  
+
+  window.fbAsyncInit = function() {
+  FB.init({
+    appId      : '1650851698548488',
+    status	   : true,
+    cookie     : true,  // enable cookies to allow the server to access 
+                        // the session
+    xfbml      : true,  // parse social plugins on this page
+    version    : 'v2.8' // use graph api version 2.8
+  });
+
+  FB.getLoginStatus(function(response) {
+    statusChangeCallback(response, function(){
+
+    });
+  });
+
+  };
+
+ var statusChangeCallback = function(response, callback) {
+    console.log(response);
+   
+    if (response.status === 'connected') {
+      getfacebookData();
+     }else {
+      callback(false);  
+    }
+  }
+  
+  function checkLoginState(callback){
+  	FB.getLoginStatus(function(response) {
+    	statusChangeCallback(response, function(){
+    		callback(false);
+    });
+	});
+  } 
+
+
+  // Load the SDK asynchronously
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+
+  // Here we run a very simple test of the Graph API after login is
+  // successful.  See statusChangeCallback() for when this call is made.
+  function getfacebookData() {
+
+    console.log('Welcome!  Fetching your information.... ');
+    FB.api('/me', {locale: 'en_US', fields: 'name, email, gender, first_name, last_name'},function(response) {
+    	$.ajax({
+						      type: "POST", 
+							url: url+"/index.php/servicios/Comprobar_correo_registrado", 
+							data: { correo: response.email },
+							dataType: "json", 
+							success: function (data) {
+								
+								if(data=="-1"){
+									$("#register-facebook").css("display", "none");
+									$("#divisor").css("display", "none");
+									$(".contenedor-slide").removeClass("active");
+									$("#slide10").addClass("active");
+									if(response.gender=="male"){
+										$("#reg_genero option[value='Masculino']").attr("selected", "selected");
+										$("#slide10 .select2-selection__rendered").text("Masculino");
+									}else{
+										$("#reg_genero option[value='Femenino']").attr("selected", "selected");
+										$("#slide10 .select2-selection__rendered").text("Femenino")
+									}
+								}else{
+									$(".block-loggin-default").css("display", "none");
+									
+									$(".loggin-facebook-box").css("display", "inherit")
+								}
+							}
+						});
+      console.log('Successful login for: ' + response.first_name +" / "+ response.last_name +" / "+response.email+" / "+response.gender +" / "+"http://graph.facebook.com/"+response.id+"/picture?type=large");
+      document.getElementById('correo_loggin').value  =response.email;
+      document.getElementById('response_name').text  =response.first_name+" "+response.last_name;
+      document.getElementById('reg_nombre').value = response.first_name;
+      document.getElementById('reg_correo').value = response.email;
+      document.getElementById('reg_apellidos').value = response.last_name;
+      $("#response_name").text(response.name);
+      document.getElementById('response_email').value  =response.email;
+
+      document.getElementById('response_imagen').src  ="https://graph.facebook.com/"+response.id+"/picture?type=large";
+      document.getElementById('reg_img').value  ="https://graph.facebook.com/"+response.id+"/picture?type=large";
+      document.getElementById('password_loggin').value  =response.id;
+
+    });
+  }
+  	 function facebookLogin(){
+  		checkLoginState(function(response){
+  			if(!response){
+  				FB.login(function(response){
+  					if(response.status === "connected"){
+  						getfacebookData();
+
+  					}
+  				}, {scope: scopes})
+  			}
+  		})
+
+  	}
+
+
+</script>
+
+<script type="text/javascript" src="js/main.js"></script>
+ <script type="text/javascript">
+ /*var RecaptchaOptions = {
+    theme : 'theme_name'
+ };*/
+ </script>
+ <script type="text/javascript">
+  $('.select-select2').select2();
+</script>
+<script type="text/javascript">
+$(window).load(function(){
+	$(document).on("click", "#login-facebook", function(){
+		facebookLogin();
+		
+	})
+		$(document).on("click", "#register-facebook", function(){
+		facebookLogin();
+		
+	})
+
+
+})
+  	
+</script>
+<script>
+														// Note: This example requires that you consent to location sharing when
+														// prompted by your browser. If you see the error "The Geolocation service
+														// failed.", it means you probably did not give permission for the browser to
+														// locate you.
+
+														function initMap() {
+														  var map = new google.maps.Map(document.getElementById('map'), {
+														    center: {lat: -34.397, lng: 150.644},
+														    zoom: 16,
+														    disableDefaultUI: true,
+														    zoomControl: true,
+														  });
+														  
+
+														  // Try HTML5 geolocation.
+														  if (navigator.geolocation) {
+														    navigator.geolocation.getCurrentPosition(function(position) {
+														      var pos = {
+														        lat: position.coords.latitude,
+														        lng: position.coords.longitude
+														      };
+														    
+
+														      console.log(pos)
+														      final_latitude=position.coords.latitude;
+														      final_longitude=position.coords.longitude;
+
+																
+														    	google.maps.event.addListener(map, 'dragend', function(evt){
+														    console.log('Lat: ' + map.getCenter().lat().toFixed(10) + ' Current Lng: ' + map.getCenter().lng().toFixed(10)) 
+														    	final_latitude=map.getCenter().lat().toFixed(10)
+														    final_longitude=map.getCenter().lng().toFixed(10)
+														});
+														    
+														      map.setCenter(pos);
+														    }, function() {
+														      handleLocationError(true, infoWindow, map.getCenter());
+														    });
+														    final_latitude=map.getCenter().lat().toFixed(10)
+														    final_longitude=map.getCenter().lng().toFixed(10)
+
+														  } else {
+														    // Browser doesn't support Geolocation
+														    handleLocationError(false, infoWindow, map.getCenter());
+														  }
+														}
+
+														function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+														  infoWindow.setPosition(pos);
+														  infoWindow.setContent(browserHasGeolocation ?
+														                        'Error: The Geolocation service failed.' :
+														                        'Error: Your browser doesn\'t support geolocation.');
+														}
+
+														    </script>
+														    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDK3W9g2zMZeD5zQ_Olz5QZowISCRC5AEU"
+														        async defer>
+														    </script>
+														<script type="text/javascript">
+															$("#permitir_ubicacion").click(function(){
+																	initMap();
+
+															});
+															$("#fijar_ubicación").click(function(){
+																$.ajax({
+													                type: "GET", 
+													                url: "https://maps.googleapis.com/maps/api/geocode/json?latlng="+final_latitude+","+final_longitude+"&sensor=true", 
+													                dataType: "json", 
+													                success: function(data){
+													                if(data){
+													                			
+													                		google_numero=data["results"][0]["address_components"][0]["long_name"];
+													                		google_calle=data["results"][0]["address_components"][1]["long_name"];
+													                		google_colonia=data["results"][0]["address_components"][2]["long_name"];
+													                		google_municipio=data["results"][0]["address_components"][4]["long_name"];
+													                		google_estado=data["results"][0]["address_components"][5]["long_name"];
+																			google_codigopostal=data["results"][0]["address_components"][7]["long_name"];
+																			
+																			$("#header-direccion2, #header-direccion").css("display", "none");
+																			$("#map-container").removeClass("active");
+																			$(".container-direccion").css("display", "inherit");
+																			$(".reg_estado").next().find(".select2-selection__rendered").text(google_estado);
+																			if(google_estado=="Ciudad de México"){
+																				$(".reg_estado").next().find(".select2-selection__rendered").text("Distrito Federal");
+																			}
+																			if(google_estado=="Estado de México"){
+																				$(".reg_estado").next().find(".select2-selection__rendered").text("México");
+																			}
+																			$(".reg_municipio").next().find(".select2-selection__rendered").text(google_municipio);
+																			$(".reg_colonia").val(google_colonia);
+																			$(".codigopostal").val(google_codigopostal);
+																			$(".num_exterior").val(google_numero);
+																			$(".calle, .reg_calle").val(google_calle);
+																			$(".new_dir_nombre, .num_interior, .alter_calle_1, .alter_calle_2, .referencias").val("");
+																			$(".title-direccion").css("display", "inherit");
+																			$(".new_dir_nombre-container").css("display", "inherit");
+																			$(".btn-confirmar-direccion-nueva-avanzar, .btn-confirmar-direccion-nueva").css("display", "inherit");
+  
+																		}
+
+													                	
+													                }
+													            });	
+																	
+
+															});
+															$("#denegar_ubicacion").click(function(){
+																$("#header-direccion2, #header-direccion, #map-container").css("display", "none");
+																$(".title-direccion").css("display", "inherit");
+																$(".title-direccion p").html("Ingresa tu dirección");
+																$(".new_dir_nombre-container").css("display", "inherit");
+																$(".btn-confirmar-direccion-nueva-avanzar, .btn-confirmar-direccion-nueva").css("display", "inherit");
+															});
+														</script>
+														
+
+</body>
+</html>
